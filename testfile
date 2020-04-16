@@ -1,0 +1,43 @@
+import 'react-native-gesture-handler';
+
+import React from 'react';
+import { StyleSheet, Text, View, ScrollView, TextInput, SafeAreaView } from 'react-native';
+import { Button, Image } from 'react-native'; //사용할 태그를 추가해준다.
+
+import {NavigationContainer} from '@react-navigation/native';
+
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Image style={{width: 200, height: 200, marginBottom: 20}}  //메인 사진
+      source={{ uri: 'https://apprecs.org/gp/images/app-icons/300/1d/ryecatchers.bibly_android.jpg' }} 
+      /> 
+      
+      <Text> //메인 텍스트
+        비-블리 by 쉼표
+      </Text> 
+      
+      <Button  //메인 로그인 버튼
+      onPress={onPressLearnMore} 
+      title="로그인" 
+      color="#00ff00" 
+      /> 
+      
+      </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fDEAEB',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+/* onPress 이벤트에 적용될 함수 */
+function onPressLearnMore(){ 
+  alert("button click"); 
+}
